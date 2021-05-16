@@ -679,7 +679,7 @@
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="133" y="154"/>
+            <point key="canvasLocation" x="76" y="98"/>
         </menu>
         <window title="NSStackView_test" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
@@ -690,11 +690,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
-                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jNW-2N-eZp">
-                        <rect key="frame" x="20" y="292" width="71" height="48"/>
+                    <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="93" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jNW-2N-eZp">
+                        <rect key="frame" x="20" y="95" width="71" height="245"/>
                         <subviews>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YVj-Wu-8Ak">
-                                <rect key="frame" x="-3" y="24" width="78" height="25"/>
+                                <rect key="frame" x="-3" y="221" width="78" height="25"/>
                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="YuU-pj-MZf" id="ffK-bo-fuW">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -707,6 +707,13 @@
                                     </menu>
                                 </popUpButtonCell>
                             </popUpButton>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sBT-ww-agy">
+                                <rect key="frame" x="-3" y="109" width="50" height="26"/>
+                                <buttonCell key="cell" type="bevel" title="Test" bezelStyle="regularSquare" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XSe-7q-mah">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bdi-xY-D30">
                                 <rect key="frame" x="-7" y="-7" width="76" height="32"/>
                                 <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="9Zc-NT-zqi">
@@ -718,8 +725,10 @@
                         <visibilityPriorities>
                             <integer value="1000"/>
                             <integer value="1000"/>
+                            <integer value="1000"/>
                         </visibilityPriorities>
                         <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
                             <real value="3.4028234663852886e+38"/>
                             <real value="3.4028234663852886e+38"/>
                         </customSpacing>
@@ -753,7 +762,7 @@
                     </stackView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="132" y="-120"/>
+            <point key="canvasLocation" x="84" y="-153"/>
         </window>
     </objects>
 </document>
