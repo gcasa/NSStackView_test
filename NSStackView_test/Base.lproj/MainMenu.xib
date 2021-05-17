@@ -15,6 +15,9 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
+                <outlet property="horizontalStack" destination="klR-ba-nZf" id="qO8-nT-lwy"/>
+                <outlet property="verticalGravityStack" destination="2xf-Lf-AMI" id="sav-mu-2ef"/>
+                <outlet property="verticalStack" destination="jNW-2N-eZp" id="ihX-9e-ha2"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -679,19 +682,19 @@
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="76" y="98"/>
+            <point key="canvasLocation" x="100" y="310"/>
         </menu>
         <window title="NSStackView_test" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="617" height="515"/>
             <rect key="screenRect" x="0.0" y="0.0" width="2048" height="1127"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="617" height="515"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="93" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jNW-2N-eZp">
-                        <rect key="frame" x="20" y="95" width="71" height="245"/>
+                        <rect key="frame" x="20" y="87" width="71" height="245"/>
                         <subviews>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YVj-Wu-8Ak">
                                 <rect key="frame" x="-3" y="221" width="78" height="25"/>
@@ -733,8 +736,56 @@
                             <real value="3.4028234663852886e+38"/>
                         </customSpacing>
                     </stackView>
+                    <stackView orientation="vertical" alignment="leading" spacing="93" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2xf-Lf-AMI">
+                        <rect key="frame" x="121" y="250" width="71" height="245"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <beginningViews>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E08-14-JJA">
+                                <rect key="frame" x="-3" y="221" width="78" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="qAv-9e-K6k" id="M56-uP-LHG">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="u1D-93-rF2">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="qAv-9e-K6k"/>
+                                            <menuItem title="Item 2" id="755-Dy-orQ"/>
+                                            <menuItem title="Item 3" id="n7G-P4-Sv9"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                        </beginningViews>
+                        <middleViews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uTr-JP-Y1r">
+                                <rect key="frame" x="-3" y="109" width="50" height="26"/>
+                                <buttonCell key="cell" type="bevel" title="Test" bezelStyle="regularSquare" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dks-Gi-Vxu">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </middleViews>
+                        <endViews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1aV-Fg-iqT">
+                                <rect key="frame" x="-7" y="-7" width="76" height="32"/>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mrv-eW-o0f">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                        </endViews>
+                        <visibilityPriorities>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                            <integer value="1000"/>
+                        </visibilityPriorities>
+                        <customSpacing>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                            <real value="3.4028234663852886e+38"/>
+                        </customSpacing>
+                    </stackView>
                     <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="klR-ba-nZf">
-                        <rect key="frame" x="236" y="324" width="130" height="16"/>
+                        <rect key="frame" x="277" y="316" width="130" height="16"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dyz-C8-uwF">
                                 <rect key="frame" x="-2" y="-1" width="61" height="18"/>
@@ -762,7 +813,7 @@
                     </stackView>
                 </subviews>
             </view>
-            <point key="canvasLocation" x="84" y="-153"/>
+            <point key="canvasLocation" x="152.5" y="-75.5"/>
         </window>
     </objects>
 </document>
